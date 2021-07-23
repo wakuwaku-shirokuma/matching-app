@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import vueUser from './components/vueUser';
+import vueTop from './components/vueTop';
 
 document.addEventListener("DOMContentLoaded", function(event) {
   new Vue({
@@ -8,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       name: 'aaa'
     },
     components: {
-      'vue-user': vueUser
+      'vue-user': vueUser,
+      'vue-top': vueTop
     }
   });
 });
