@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "release": "webpack --config config/production/webpack.config.js",
     "build": "webpack --config config/development/webpack.config.js",
     "watch": "webpack --watch --config config/development/webpack.config.js"
@@ -24,5 +24,8 @@
     "vue-template-compiler": "^2.6.14",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
   }
 }
