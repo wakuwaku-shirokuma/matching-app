@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   #end
 
   resources :users
+
   #resources :tops
-  get '/'     => 'top#index'
+  get '/' => 'top#index'
+
+  #新規登録関連
+  get '/entry' => 'registration#entry'
 
 end
