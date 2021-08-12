@@ -12,6 +12,9 @@
       >
       </vue-user-item>
     </div>
+    <v-btn dark>Button</v-btn>
+    <v-btn color="#F0E68C" fab>tile</v-btn>
+    <v-btn dark rounded>rounded</v-btn>
   </div>
 </template>
 <script>

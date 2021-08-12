@@ -8,6 +8,7 @@
         <p class="message">準備ができていない人は<a href="#">こちらから</a></p>
       </form>
     </div>
+    <div id="fullOverlay"></div>
   </div>
 </template>
 
@@ -23,7 +24,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
   .login-page {
@@ -115,14 +116,14 @@ export default {
     color: #EF3B3A;
   }
 
-  html {
-    height: 100%;
-  }
-
-  body {
-    background: url(main.jpg) center center / cover no-repeat;
+  #fullOverlay {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;      
+    -moz-osx-font-smoothing: grayscale; 
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: url(main.jpg) center center / cover no-repeat;
+    z-index: 0;
   }
 </style>

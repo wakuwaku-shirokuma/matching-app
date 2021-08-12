@@ -1,4 +1,4 @@
-<template>
+<template lang="pug">
   <div class="vueuserItem" v-bind:class="{active: isActive}">
     <p v-on:click="toggleActive();">
       {{name}}
@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
   .vueuampleItem {
     border: 1px dashed #abcdef;
     margin: 4px 0; 

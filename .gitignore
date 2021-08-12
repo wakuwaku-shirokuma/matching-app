@@ -30,6 +30,7 @@ vendor/bundle
 /config/master.key
 
 /frontend/node_modules*
+/node_modules*
 /public/packs
 /public/packs-test
 /yarn-error.log
