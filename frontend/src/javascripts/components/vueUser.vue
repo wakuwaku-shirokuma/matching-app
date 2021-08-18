@@ -70,20 +70,7 @@ export default {
     return {
       //usersがデータを入れる配列
       //この配列を編集すると自動的に表示に反映される
-      users: [
-        {
-          id: 1,
-          name: 'sample1'
-        },
-        {
-          id: 2,
-          name: 'sample2'
-        },
-        {
-          id: 3,
-          name: 'Sample3'
-        }
-      ],
+      users: [ {id: 1, name: 'sample1'}, {id: 2, name: 'sample2'}, {id: 3, name: 'Sample3'}],
       //表示したいメッセージ
       message: 'Message',
       cards: ['Today', 'Yesterday'],
