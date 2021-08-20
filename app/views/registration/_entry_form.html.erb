@@ -1,0 +1,55 @@
+<div class="container">
+  <form action="＃" method="get" class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="name"><span class="label label-danger">必須</span> お名前</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="例：いつも いっしょ" autofocus required>
+      </div>
+      <div class="form-group">
+        <label for="email"><span class="label label-danger">必須</span> メールアドレス</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="例：always-together@tsunagaru.love" required>
+      </div>
+      <div class="form-group">
+        <label for="tel"><span class="label label-danger">必須</span> 電話番号</label>
+        <input type="tel" id="tel" name="tel" class="form-control" placeholder="例：012-3456-7890" required>
+        </div>
+      <div class="form-group">
+        <label><span class="label label-danger">必須</span> 性別</label>
+        <div>
+          <label class="radio-inline">
+            <input type="radio" name="male" value="1" required>男性
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="female" value="2" required>女性
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="job"><span class="label label-success">任意</span> あなたがこのサイトで求める存在</label>
+        <select id="job" name="job" class="form-control">
+          <option value="">選択してください</option>
+          <option value="友達">友達</option>
+          <option value="友達以上恋人未満">友達以上恋人未満</option>
+          <option value="恋人">恋人</option>
+          <option value="愛人">愛人</option>
+          <option value="結婚相手">結婚相手</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label><span class="label label-success">任意</span> あなたが学びたいこと（複数選択可）</label>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="q1_html" name="q1" value="つながり方">つながり方について
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="q1_html" name="q1" value="つながる相手">つながる相手について
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">送信する</button>
+    </div>
+  </form>
+</div>
