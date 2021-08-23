@@ -1,5 +1,5 @@
 <div class="container">
-  <%= form_with model: User.new, method: "get", local: true, class: "row" do |f| %>
+  <%= form_with url: "/confirm", method: :post, local: true, class: "row" do |f| %>
     <div class="col-sm-12">
       <div class="form-group">
         <label for="name"><span class="label label-danger">必須</span> お名前</label>
