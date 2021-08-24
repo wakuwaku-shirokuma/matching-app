@@ -1,28 +1,10 @@
 <!DOCTYPE html>
 <html lang="jp">
-  <head>
-    <title>つながるための準備、できた？</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-  </head>
+  <%= render :partial => "registration/shared/header" %>
   <body>
-    <div class="container">
-      <header>
-        <div class="row">
-          <h1>つながるための準備、できた？</h1>
-        </div>
-      </header>
-    </div>
-    <hr>
+    <%= render :partial => "registration/shared/content_header" %>
     <%= render :partial => "confirm_form" %>
-    <hr>
-    <div class="container">
-      <footer>
-        <p>&copy; つながる.love</p>
-      </footer>
-    </div>
+    <%= render :partial => "registration/shared/content_footer" %>
   </body>
 </html>
 
