@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   #新規登録関連
   get '/entry' => 'registration#entry'
   post '/confirm' => 'registration#confirm'
+  post '/thanks' => 'registration#thanks'
 
 end
