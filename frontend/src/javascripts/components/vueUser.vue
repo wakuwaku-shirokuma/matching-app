@@ -46,7 +46,7 @@
               <v-card>
                 <v-subheader>{{ card }}</v-subheader>
                 <v-list two-line>
-                  <template v-for="n in 6">
+                  <template v-for="n in 3">
                     <v-list-item :key="n">
                       <v-list-item-avatar color="grey darken-1"></v-list-item-avatar>
                       <v-list-item-content>
@@ -56,7 +56,7 @@
                         </v-list-item-subtitle>
                       </v-list-item-content>
                     </v-list-item>
-                    <v-divider v-if="n !== 6" :key="`divider-${n}`" inset></v-divider>
+                    <v-divider v-if="n !== 3" :key="`divider-${n}`" inset></v-divider>
                   </template>
                 </v-list>
               </v-card>
@@ -95,7 +95,7 @@ export default {
     return {
       //usersがデータを入れる配列
       //この配列を編集すると自動的に表示に反映される
-      users: [ {id: 1, name: 'sample1'}, {id: 2, name: 'sample2'}, {id: 3, name: 'Sample3'}],
+      users: [ {id: 1, name: 'ユーザー１'}, {id: 2, name: 'ユーザー２'}, {id: 3, name: 'ユーザー３'}],
       //表示したいメッセージ
       message: 'Message',
       cards: ['Today', 'Yesterday'],
