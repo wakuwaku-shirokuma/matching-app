@@ -12,7 +12,7 @@
       <v-sheet color="grey lighten-4" class="pa-4">
         <v-avatar class="mb-4" color="grey darken-1" size="64">
         </v-avatar>
-        <div>john@vuetifyjs.com</div>
+        <div>always-together@tsunagaru.love</div>
       </v-sheet>
       <v-divider></v-divider>
       <v-list>
@@ -29,6 +29,11 @@
         <v-list-item>
           <v-list-item-content>
             <v-list-item-title @click="isSelect('3')">現在のつながり</v-list-item-title>
+          </v-list-item-content> 
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>ログアウト</v-list-item-title>
           </v-list-item-content> 
         </v-list-item>
       </v-list>
