@@ -159,7 +159,11 @@
     <div v-else-if="isActive === '3'">
       <v-main>
         <v-container class="py-8 px-6" fluid>
-          その３
+          <v-row>
+            <v-col v-for="n in 24" :key="n" cols="4">
+              <v-card height="200"></v-card>
+            </v-col>
+          </v-row>
         </v-container>
       </v-main>  
     </div>
