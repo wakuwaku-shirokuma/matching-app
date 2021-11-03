@@ -157,15 +157,7 @@
     </div>  
 
     <div v-else-if="isActive === '3'">
-      <v-main>
-        <v-container class="py-8 px-6" fluid>
-          <v-row>
-            <v-col v-for="n in 24" :key="n" cols="4">
-              <v-card height="200"></v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-main>  
+      <vue-column></vue-column>
     </div>
 
     <div v-else-if="isActive === '4'">
@@ -182,6 +174,7 @@
 <script>
 
 import vueUserItem from './vueUserItem';
+import vueColumn from './vueColumn';
 
 export default {
   name: 'vueUser',
@@ -249,7 +242,8 @@ export default {
   },
   //子コンポーネントを指定する
   components: {
-    'vue-user-item': vueUserItem
+    'vue-user-item': vueUserItem,
+    'vue-column': vueColumn
   }
 }
 </script>
