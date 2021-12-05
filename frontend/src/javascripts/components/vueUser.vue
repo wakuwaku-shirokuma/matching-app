@@ -1,34 +1,29 @@
 <template>
   <v-app id="inspire">
 
-    <v-system-bar app>
-      <v-spacer></v-spacer>
-      <v-icon>mdi-square</v-icon>
-      <v-icon>mdi-circle</v-icon>
-      <v-icon>mdi-triangle</v-icon>
-    </v-system-bar>
-
+    <!-- SideBar -->
     <v-navigation-drawer v-model="drawer" app>
-      <v-sheet color="grey lighten-4" class="pa-4">
-        <v-avatar class="mb-4" color="grey darken-1" size="64">
-        </v-avatar>
-        <div>always-together@tsunagaru.love</div>
-      </v-sheet>
+      <vue-profile></vue-profile>
       <v-divider></v-divider>
       <v-list>
         <v-list-item>
           <v-list-item-content>
-            <v-list-item-title @click="isSelect('1')">お相手一覧</v-list-item-title>
+            <v-list-item-title @click="isSelect('1')">プロフィール詳細・編集</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            <v-list-item-title @click="isSelect('2')">お役立ちコラム</v-list-item-title>
+            <v-list-item-title @click="isSelect('2')">お相手一覧</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title @click="isSelect('3')">お役立ちコラム</v-list-item-title>
           </v-list-item-content>    
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            <v-list-item-title @click="isSelect('3')">現在のつながり</v-list-item-title>
+            <v-list-item-title @click="isSelect('4')">現在のつながり</v-list-item-title>
           </v-list-item-content> 
         </v-list-item>
         <v-list-item>
@@ -37,52 +32,27 @@
           </v-list-item-content> 
         </v-list-item>
       </v-list>
-      <!-- usersに格納された配列を元に表示する -->
-      <!-- idとnameを子コンポーネントに渡す -->
-      <!-- keyはあったほうがいいと思われる -->
-      <vue-user-item v-for="user in users" v-bind:key="user.id" v-bind:name="user.name" v-bind:id="user.id"></vue-user-item>
     </v-navigation-drawer>
 
+    <!-- ProfileDetail -->
     <div v-if="isActive === '1'">
-      <v-main>
-        <v-container class="py-8 px-6" fluid>
-          <v-row>
-            <v-col v-for="card in cards" :key="card" cols="12">
-              <v-card>
-                <v-subheader>{{ card }}</v-subheader>
-                <v-list two-line>
-                  <template v-for="n in 3">
-                    <v-list-item :key="n">
-                      <v-list-item-avatar color="grey darken-1"></v-list-item-avatar>
-                      <v-list-item-content>
-                        <v-list-item-title>Message {{ n }}</v-list-item-title>
-                        <v-list-item-subtitle>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil repellendus distinctio similique
-                        </v-list-item-subtitle>
-                      </v-list-item-content>
-                    </v-list-item>
-                    <v-divider v-if="n !== 3" :key="`divider-${n}`" inset></v-divider>
-                  </template>
-                </v-list>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-main>
+      <vue-profile-detail></vue-profile-detail>
     </div>  
 
-    <div v-else-if="isActive === '2'">
-      <v-main>
-        <v-container class="py-8 px-6" fluid>
-          その２
-        </v-container>
-      </v-main>  
+    <!-- Partner -->
+    <div v-if="isActive === '2'">
+      <vue-partner></vue-partner>
+    </div>  
+
+    <!-- Column -->
+    <div v-else-if="isActive === '3'">
+      <vue-column></vue-column>
     </div>
 
-    <div v-else-if="isActive === '3'">
+    <div v-else-if="isActive === '4'">
       <v-main>
         <v-container class="py-8 px-6" fluid>
-          その３
+          その４
         </v-container>
       </v-main>
     </div>
@@ -92,25 +62,17 @@
 
 <script>
 
-import vueUserItem from './vueUserItem';
+import vueProfile from './vueProfile';
+import vueProfileDetail from './vueProfileDetail';
+import vuePartner from './vuePartner';
+import vueColumn from './vueColumn';
 
 export default {
   name: 'vueUser',
   data: function(){
     return {
-      //usersがデータを入れる配列
-      //この配列を編集すると自動的に表示に反映される
-      users: [ {id: 1, name: 'ユーザー１'}, {id: 2, name: 'ユーザー２'}, {id: 3, name: 'ユーザー３'}],
-      //表示したいメッセージ
-      message: 'Message',
-      cards: ['Today', 'Yesterday'],
       drawer: null,
-      isActive: "1",
-      //links: [
-      //  ['1', 'その１'],
-      //  ['2', 'その２'],
-      //  ['3', 'その３'],
-      //]
+      isActive: "1"
     }
   },
   methods: {
@@ -120,7 +82,10 @@ export default {
   },
   //子コンポーネントを指定する
   components: {
-    'vue-user-item': vueUserItem
+    'vue-profile': vueProfile,
+    'vue-profile-detail': vueProfileDetail,
+    'vue-partner': vuePartner,
+    'vue-column': vueColumn
   }
 }
 </script>
