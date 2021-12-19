@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+
+  # createはすでに存在するのエラーが出る
+  # buildだと、インスタンスそのものは問題なく作れる
+  
   describe "#confirm" do
 
     context "空の場合" do

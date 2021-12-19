@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+  has_many :user_details, class_name: 'UserDetail'
+
   GENDERS = { other: 0, male: 1, female: 2 }
 
   enum gender: GENDERS
@@ -6,4 +9,5 @@ class User < ApplicationRecord
   validates :gender, inclusion: { in: GENDERS.keys.concat(GENDERS.keys.map(&:to_s)) }, exclusion: { in: [nil] }
   validates :name, exclusion: { in: [nil, ""] }
   validates :note, exclusion: { in: [nil] }
+
 end
